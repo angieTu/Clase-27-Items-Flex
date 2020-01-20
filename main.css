@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  display: flex;
+  overflow: hidden; }
+
+.box {
+  flex-grow: 1; }
+  .box img {
+    width: 314%; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+}
+
+.box {
+    flex-grow: 1;
+
+    img {
+        width: 314%;
+       }
+   }
