@@ -9,7 +9,7 @@ body {
   body .box {
     flex-grow: 1;
     position: relative;
-    transition: .3s; }
+    transition: 0.3s; }
     body .box::before {
       content: "Lorem Ipsum";
       position: absolute;
@@ -18,17 +18,19 @@ body {
       width: 82px;
       left: calc(50% - 41px);
       z-index: 1;
-      transition: 0.3s; }
+      transition: 0.3s;
+      display: none; }
     body .box:hover {
       flex-grow: 4; }
     body .box:hover::before {
       top: 291px;
       width: 82px;
       left: calc(50% - 41px);
-      transform: scale(3); }
+      transform: scale(3);
+      display: block; }
     body .box img {
       width: 800px;
-      height: 600px;
+      height: 100vh;
       position: absolute; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,48 +1,49 @@
 body {
-    margin: 0;
-    display:flex;
+  margin: 0;
+  display: flex;
 
-    &:hover div img {
-        filter: grayscale(100%);
+  &:hover div img {
+    filter: grayscale(100%);
+  }
+
+  &:hover div:hover img {
+    -webkit-filter: brightness(90%) contrast(95%) grayscale(50%);
+    filter: brightness(90%) contrast(95%) grayscale(50%) grayscale(0%);
+  }
+
+  .box {
+    flex-grow: 1;
+    position: relative;
+    transition: 0.3s;
+
+    &::before {
+      content: "Lorem Ipsum";
+      position: absolute;
+      color: white;
+      top: -22px;
+      width: 82px;
+      left: calc(50% - 41px);
+      z-index: 1;
+      transition: 0.3s;
+      display: none;
     }
 
-    &:hover div:hover img {
-            -webkit-filter: brightness(90%) contrast(95%) grayscale(50%);
-            filter: brightness(90%) contrast(95%) grayscale(50%) grayscale(0%);
-          }
-          
-    .box {
-        flex-grow: 1;
-        position: relative;
-        transition: .3s;
-
-        &::before {
-            content: "Lorem Ipsum";
-            position: absolute;
-            color:white;
-            top: -22px;
-            width: 82px;
-            left: calc(50% - 41px);
-            z-index: 1;
-            transition: .3s
-        }
-
-        &:hover {
-            flex-grow: 4;
-        }
-
-        &:hover::before {
-                top: 291px;
-                width: 82px;
-                left: calc(50% - 41px);
-                transform: scale(3);
-            }
-
-        img {
-            width: 800px;
-            height: 600px;
-            position: absolute
-        }
+    &:hover {
+      flex-grow: 4;
     }
 
+    &:hover::before {
+      top: 291px;
+      width: 82px;
+      left: calc(50% - 41px);
+      transform: scale(3);
+      display: block;
+    }
+
+    img {
+      width: 800px;
+      height: 100vh;
+      position: absolute;
+    }
+  }
 }
